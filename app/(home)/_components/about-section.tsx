@@ -26,7 +26,7 @@ export default function AboutSection({ className = "" }: AboutSectionProps) {
                 <h2 className="text-xl lg:text-3xl font-bold text-gray-900 leading-tight">
                   <span className="text-gray-800">About</span>
                   <div className="inline-block ml-3 relative">
-                    <span className=" font-bold">
+                    <span className="text-[#3E5EC0] font-bold">
                       EuroQuest
                     </span>
                     <img

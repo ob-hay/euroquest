@@ -5,7 +5,6 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import ContactPopup from "@/components/popups/contact";
 import { usePopupStore } from "@/store/popup-store";
 
 export default function Navbar() {
@@ -61,17 +60,18 @@ export default function Navbar() {
   return (
     <>
       {/* Main Navbar */}
-      <nav className="fixed top-0 left-0 w-full h-[70px] bg-white flex items-center z-[100]">
+      <nav className="fixed top-0 left-0 w-full h-[70px] bg-white flex items-center z-[100]" aria-label="Main navigation">
         <div className="container mx-auto">
           <div className="w-full flex items-center justify-between">
             <div className="flex items-center gap-4 max-w-[280px] justify-between">
-              <Link href="/">
+              <Link href="/" aria-label="EuroQuest International - Return to homepage">
                 <Image
                   src="/assets/images/logo.svg"
-                  alt="Logo"
-                  width={120}
-                  height={40}
+                  alt="EuroQuest International Training Logo"
+                  width={190}
+                  height={50}
                   className="w-[160px] lg:w-[190px] lg:h-[50px]"
+                  priority
                 />
               </Link>
             </div>
@@ -159,10 +159,11 @@ export default function Navbar() {
                 <div className="flex items-center justify-between mb-4">
                   <Image
                     src="/assets/images/logo.svg"
-                    alt="Logo"
+                    alt="EuroQuest International Training Logo"
                     width={160}
                     height={50}
                     className="w-40 h-auto max-[480px]:w-36"
+                    priority
                   />
                   <motion.button
                     className="w-10 h-10 border-none rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-blue-500/15 hover:scale-105"
