@@ -17,7 +17,6 @@ export default async function CitiesSection() {
       />
 
       <Container>
-        {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-center items-start gap-3 md:justify-between">
           <div>
             <SectionTitle
