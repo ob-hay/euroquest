@@ -33,7 +33,6 @@ export default async function CitiesSection() {
           </Link>
         </div>
 
-        {/* Cities Slider */}
         <CitiesSlider cities={cities} />
       </Container>
     </section>
