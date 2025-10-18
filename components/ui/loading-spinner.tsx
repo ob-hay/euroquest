@@ -11,6 +11,7 @@ export default function LoadingSpinner() {
             width={80}
             height={89}
             className="animate-pulse"
+            unoptimized
           />
           <div className="absolute inset-0 animate-ping">
             <Image
@@ -19,6 +20,7 @@ export default function LoadingSpinner() {
               width={80}
               height={89}
               className="opacity-30"
+              unoptimized
             />
           </div>
         </div>

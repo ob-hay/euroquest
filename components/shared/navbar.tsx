@@ -72,6 +72,7 @@ export default function Navbar() {
                   height={50}
                   className="w-[160px] lg:w-[190px] lg:h-[50px]"
                   priority
+                  loading="lazy"
                 />
               </Link>
             </div>
@@ -164,6 +165,7 @@ export default function Navbar() {
                     height={50}
                     className="w-40 h-auto max-[480px]:w-36"
                     priority
+                    unoptimized
                   />
                   <motion.button
                     className="w-10 h-10 border-none rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-blue-500/15 hover:scale-105"

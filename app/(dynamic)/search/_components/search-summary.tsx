@@ -3,25 +3,20 @@ interface SearchSummaryProps {
   resultType: "timings" | "courses";
   appliedFilters: SearchFilters;
   cacheStatus: "hit" | "miss" | null;
+  loading?: boolean;
   performance?: {
     duration: number;
     fromCache: boolean;
   };
 }
 
-export default function SearchSummary({
-  totalCount,
-  resultType,
-  appliedFilters,
-  cacheStatus,
-  performance,
-}: SearchSummaryProps) {
+export default function SearchSummary({ appliedFilters }: SearchSummaryProps) {
   const hasFilters = Object.values(appliedFilters).some((value) => value);
 
   return (
-    <div className="bg-gray-50 rounded-lg p-4 mb-6">
+    <>
       {hasFilters && (
-        <div>
+        <div className="bg-gray-50 rounded-lg p-4 mb-6">
           <h3 className="text-sm font-medium text-gray-700 mb-2">
             Applied Filters:
           </h3>
@@ -55,6 +50,6 @@ export default function SearchSummary({
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }

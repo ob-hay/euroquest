@@ -2,6 +2,7 @@
 
 import React from "react";
 import LoadingSpinner from "@/components/ui/loading-spinner";
+import SmallLoadingSpinner from "@/components/ui/small-loading-spinner";
 import SearchBanner from "@/components/shared/search-banner";
 import SearchHero from "./search-hero";
 import SearchResults from "./search-results";
@@ -75,8 +76,21 @@ export default function SearchSection() {
           cacheStatus={cacheStatus}
         />
 
+        {/* Loading State */}
+        {loading && (
+          <div className="flex justify-center items-center py-12">
+            <SmallLoadingSpinner 
+              size="lg" 
+              text="Searching courses..." 
+              className="flex-col gap-3"
+            />
+          </div>
+        )}
+
         {/* Search Results */}
-        <SearchResults results={searchResults} resultType={resultType} />
+        {!loading && (
+          <SearchResults results={searchResults} resultType={resultType} />
+        )}
       </div>
     </>
   );

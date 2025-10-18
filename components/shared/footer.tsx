@@ -18,6 +18,7 @@ export default function Footer() {
                   width={150}
                   height={50}
                   className="w-[200px] h-auto mb-8 mt-2"
+                  unoptimized
                 />
               </Link>
               <ul className="flex flex-col gap-4">
