@@ -1,4 +1,4 @@
-import { getBlogs } from "@/services/services";
+import { getBlogs, searchBlogs } from "@/services/services";
 import BlogsList from "./blogs-list";
 import { Suspense } from "react";
 import SearchInput from "@/components/shared/search-input";
@@ -32,7 +32,8 @@ async function BlogsContent({
   keyword?: string;
   page: number;
 }) {
-  const blogsData = await getBlogs({
+  // Use searchBlogs for GET request with search parameters in query string
+  const blogsData = await searchBlogs({
     keyword: keyword || undefined,
     page: page,
   });

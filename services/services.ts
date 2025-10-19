@@ -535,9 +535,45 @@ export const getBlogs = async (filters?: BlogSearchFilters): Promise<BlogsApiRes
   }
 };
 
-// Search blogs by tag
+// Search blogs using GET method with search parameters in query string
 export const searchBlogs = async (filters: BlogSearchFilters): Promise<BlogsApiResponse> => {
-  return getBlogs(filters);
+  try {
+    // Create query parameters with search key and value
+    const params: Record<string, string> = {};
+    
+    if (filters.keyword) {
+      params.search = filters.keyword;
+    }
+    if (filters.tag) {
+      params.tag = filters.tag;
+    }
+    if (filters.page) {
+      params.page = filters.page.toString();
+    }
+
+    // Create cache key with search parameters
+    const cacheKey = `${API_ENDPOINTS.BLOGS}_search_${JSON.stringify(params)}`;
+    
+    // Check cache first
+    const cached = cacheService.get<BlogsApiResponse>(cacheKey);
+    if (cached) {
+      return cached;
+    }
+
+    // Use GET method with search parameters in query string
+    const response = await apiClient.get<BlogsApiResponse>(API_ENDPOINTS.BLOGS, { params });
+
+    if (response.success && response.data) {
+      // Cache the result with shorter TTL for search results
+      cacheService.set(cacheKey, response.data, undefined, CACHE_CONFIG.SEARCH_TTL);
+      return response.data;
+    }
+
+    throw new Error(response.message || "Failed to search blogs");
+  } catch (error) {
+    console.error("Error searching blogs:", error);
+    throw error;
+  }
 };
 
 export const getBlogBySlug = async (slug: string): Promise<Blog | null> => {

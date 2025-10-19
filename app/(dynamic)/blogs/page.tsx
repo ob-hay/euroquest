@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import HeroBanner from "@/components/shared/hero-banner";
 import BlogsSection from "@/app/(dynamic)/blogs/_components/blogs-section";
 import { Home } from "lucide-react";
-import { getBlogs, getSeoData } from "@/services/services";
+import { getBlogs, searchBlogs, getSeoData } from "@/services/services";
 import Container from "@/components/shared/container";
 import Schema from "@/components/shared/schema";
 
@@ -98,7 +98,8 @@ interface BlogsPageProps {
 
 export default async function BlogsPage({ searchParams }: BlogsPageProps) {
   const params = await searchParams;
-  const blogsData = await getBlogs();
+  // Use searchBlogs for GET request with search parameters in query string
+  const blogsData = await searchBlogs({});
   const baseUrl = "https://euroqst.com";
 
   const breadcrumbs = [
