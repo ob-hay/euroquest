@@ -38,10 +38,10 @@ export async function generateMetadata({
       publisher: "EuroQuest International",
       // robots: {
       //   index: true,
-      //   follow: true,
+      //   follow: false,
       //   googleBot: {
       //     index: true,
-      //     follow: true,
+      //     follow: false,
       //     "max-video-preview": -1,
       //     "max-image-preview": "large",
       //     "max-snippet": -1,
@@ -95,7 +95,7 @@ export async function generateMetadata({
       publisher: "EuroQuest International",
       // robots: {
       //   index: true,
-      //   follow: true,
+      //   follow: false,
       // },
       alternates: {
         canonical: `${baseUrl}/training-courses`,
