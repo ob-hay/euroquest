@@ -8,11 +8,11 @@ interface AboutSectionProps {
 
 export default function AboutSection({ className = "" }: AboutSectionProps) {
   return (
-    <section className={`py-16 lg:py-24 bg-[#F2F8FF] ${className}`}>
+    <section className={`py-8 bg-[#F2F8FF] ${className}`}>
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="flex items-center justify-between flex-wrap md:flex-row flex-col gap-8">
           {/* About Content */}
-          <div className="about-content relative">
+          <div className="about-content relative max-w-[600px]">
             {/* Decorative bullets shape */}
             <img
               src="/assets/images/bullets-shape.svg"
@@ -21,26 +21,22 @@ export default function AboutSection({ className = "" }: AboutSectionProps) {
             />
 
             {/* Section Header */}
-            <div className="mb-8">
-              <div>
-                <h2 className="text-xl lg:text-3xl font-bold text-gray-900 leading-tight">
-                  <span className="text-gray-800">About</span>
-                  <div className="inline-block ml-3 relative">
-                    <span className="text-[#3E5EC0] font-bold">
-                      EuroQuest
-                    </span>
-                    <img
-                      src="/assets/images/line.svg"
-                      alt=""
-                      className="absolute -bottom-1 left-0 w-full h-auto"
-                    />
-                  </div>
-                </h2>
-              </div>
+            <div className="mb-4">
+              <h2 className="text-xl lg:text-4xl font-bold text-gray-900 leading-tight">
+                <span className="text-gray-800">About</span>
+                <div className="inline-block ml-3 relative">
+                  <span className="text-[#3E5EC0] font-bold">EuroQuest</span>
+                  <img
+                    src="/assets/images/line.svg"
+                    alt=""
+                    className="absolute -bottom-1 left-0 w-full h-auto"
+                  />
+                </div>
+              </h2>
             </div>
 
             {/* About Text Points */}
-            <div className="space-y-6 mb-8">
+            <div className="space-y-6 mb-5">
               <p className="flex items-start gap-2 text-gray-700 text-base leading-relaxed">
                 <Check className="w-5 h-5 mt-1 flex-shrink-0" />
                 <span>
@@ -86,7 +82,7 @@ export default function AboutSection({ className = "" }: AboutSectionProps) {
 
             {/* Button */}
             <Link href="/about" className="inline-block ml-6">
-              <button 
+              <button
                 className="bg-[#3E5EC0] hover:bg-[#2d4aa7] !mt-0 text-white px-8 py-3 rounded-lg font-semibold text-sm transform flex items-center gap-3 group"
                 suppressHydrationWarning={true}
               >
@@ -109,18 +105,12 @@ export default function AboutSection({ className = "" }: AboutSectionProps) {
           </div>
 
           {/* About Image */}
-          <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl">
-              <img
-                src="/assets/images/about-img.png"
-                alt="About EuroQuest"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-
-            {/* Decorative elements */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#3E5EC0]/10 rounded-full blur-xl"></div>
-            <div className="absolute -top-4 -left-4 w-16 h-16 bg-[#3E5EC0]/5 rounded-full blur-lg"></div>
+          <div className="relative overflow-hidden rounded-2xl max-w-[500px]">
+            <img
+              src="/assets/images/about-img.png"
+              alt="About EuroQuest"
+              className="w-full h-auto object-cover"
+            />
           </div>
         </div>
       </Container>
