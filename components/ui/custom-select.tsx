@@ -195,7 +195,7 @@ export default function CustomSelect({
 
         {/* Dropdown */}
         {isOpen && (
-          <div className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg max-h-60 overflow-auto">
+          <div className="absolute h-[140px] z-50 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg max-h-60 overflow-auto">
             <div className="p-1">
               {options.length === 0 ? (
                 <div className="px-2 py-1.5 text-sm text-gray-500">
