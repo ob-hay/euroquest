@@ -72,7 +72,6 @@ export default function Navbar() {
                   height={50}
                   className="w-[160px] lg:w-[190px] lg:h-[50px]"
                   priority
-                  loading="lazy"
                 />
               </Link>
             </div>

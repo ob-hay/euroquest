@@ -140,7 +140,7 @@ export default function SearchBannerHome() {
         message="Please select training type, city, or month as well to search"
         buttonText="OK"
       />
-      <div className="relative z-50 w-full mx-auto max-w-5xl md:mt-8 mt-5 bg-white rounded-[20px] md:rounded-[15px] shadow-[1px_1px_37px_0_rgb(62_94_192_/35%)] md:p-[20px_16px] p-4 pb-9 border border-gray-100 transform translate-y-0">
+      <div className="relative z-50 w-full md:mt-8 mt-5 bg-white rounded-[20px] md:rounded-[15px] shadow-[1px_1px_37px_0_rgb(62_94_192_/35%)] md:p-[20px_16px] p-4 pb-9 border border-gray-100 transform translate-y-0">
         <form
           ref={formRef}
           onSubmit={handleSubmit}

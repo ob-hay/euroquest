@@ -13,14 +13,14 @@ export default function HeroSection({ className = "" }: HeroSectionProps) {
     >
       {/* Animated Background Orbs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-48 -left-48 w-96 h-96 bg-gradient-to-br from-blue-400/70 to-transparent rounded-full blur-[80px] animate-float opacity-70"></div>
+        <div className="absolute -top-48 -left-48 w-96 h-96 bg-gradient-to-br from-[#667eea] to-[#314ea900]  rounded-full blur-[80px] animate-float opacity-70"></div>
         <div className="absolute -bottom-36 -right-36 w-72 h-72 bg-gradient-to-br from-blue-400/70 to-transparent rounded-full blur-[80px] animate-float-delayed opacity-70"></div>
       </div>
 
-      <Container className="h-full min-h-[calc(100vh-160px)] flex flex-col items-center justify-center gap-5 text-center static">
+      <Container className="max-w-[1200px] mx-auto h-full min-h-[calc(100vh-160px)] flex flex-col items-center justify-center gap-5 text-center static">
         <div className="max-w-full w-full">
           {/* Hero Title */}
-          <h1 className="font-jost text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 leading-tight max-w-5xl mx-auto animate-slide-up">
+          <h1 className="font-jost text-2xl md:text-4xl lg:text-5xl max-w-[1000px] mx-auto font-bold text-gray-900 mb-2 leading-tight animate-slide-up">
             Join
             <span className="relative inline-block mx-2">
               <span className="text-[#3E5EC0] font-bold">1000+</span>
@@ -34,7 +34,7 @@ export default function HeroSection({ className = "" }: HeroSectionProps) {
           </h1>
 
           {/* Hero Description */}
-          <p className="text-gray-600 mx-auto mb-2 text-base md:text-lg leading-relaxed max-w-4xl animate-fade-in-delay opacity-0 transform translate-y-5">
+          <p className="text-gray-600 mb-2 text-base md:text-lg leading-relaxed max-w-[900px] mx-auto animate-fade-in-delay opacity-0 transform translate-y-5">
             EuroQuest International is a leading educational and training
             institution, offering 1000+ high-quality training programs and
             courses worldwide, designed to develop skills and meet our clients'

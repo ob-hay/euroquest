@@ -34,7 +34,7 @@ export default function AnimatedCitiesGrid({
     <motion.div
       className="grid gap-4"
       style={{
-        gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+        gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))",
       }}
       variants={containerVariants}
       initial="hidden"
