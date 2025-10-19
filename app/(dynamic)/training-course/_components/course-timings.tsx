@@ -6,7 +6,6 @@ import { usePopupHandlers } from "./hooks/use-popup-handlers";
 import SearchSection from "./shared/search-section";
 import TimingGrid from "./shared/timing-grid";
 import { createSearchFields, createCustomActions, SearchPageType } from "./utils/search-config";
-import LoadingSpinner from "@/components/ui/loading-spinner";
 import { usePathname } from "next/navigation";
 
 interface CourseTimingsProps {
@@ -40,8 +39,8 @@ export default function CourseTimings({ course, timings }: CourseTimingsProps) {
 
   // Handle search form submission
   const handleSearchSubmit = (data: Record<string, string>) => {
-    const month = data.month || null;
     const city = data.city || null;
+    const month = data.month || null;
     
     handleMonthChange(month);
     
