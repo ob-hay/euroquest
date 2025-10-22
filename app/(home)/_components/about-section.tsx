@@ -104,13 +104,47 @@ export default function AboutSection({ className = "" }: AboutSectionProps) {
             </Link>
           </div>
 
-          {/* About Image */}
-          <div className="relative overflow-hidden rounded-2xl max-w-[500px]">
-            <img
-              src="/assets/images/about-img.png"
-              alt="About EuroQuest"
-              className="w-full h-auto object-cover"
-            />
+          {/* Statistics Grid */}
+          <div className="grid grid-cols-2 gap-5 max-w-[400px] w-full">
+            {/* Courses */}
+            <div className="bg-white rounded-2xl p-8 w-full h-full flex items-center justify-center text-center flex-col">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+                1000<span className="text-[#3E5EC0]">+</span>
+              </div>
+              <div className="text-sm text-[#6E6E6E]">Courses</div>
+            </div>
+
+            {/* Cities */}
+            <div className="bg-white rounded-2xl p-8 w-full h-full flex items-center justify-center text-center flex-col">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+                24<span className="text-[#3E5EC0]">+</span>
+              </div>
+              <div className="text-sm text-[#6E6E6E]">Cities</div>
+            </div>
+
+            {/* Happy Clients */}
+            <div className="bg-white rounded-2xl p-8 w-full h-full flex items-center justify-center text-center flex-col">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+                200<span className="text-[#3E5EC0]">+</span>
+              </div>
+              <div className="text-sm text-[#6E6E6E]">
+                Happy
+                <br />
+                Clients
+              </div>
+            </div>
+
+            {/* On Going Projects */}
+            <div className="bg-white rounded-2xl p-8 w-full h-full flex items-center justify-center text-center flex-col">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+                100<span className="text-[#3E5EC0]">+</span>
+              </div>
+              <div className="text-sm text-[#6E6E6E]">
+                On Going
+                <br />
+                Projects
+              </div>
+            </div>
           </div>
         </div>
       </Container>
