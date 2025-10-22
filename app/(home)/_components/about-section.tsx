@@ -22,7 +22,7 @@ export default function AboutSection({ className = "" }: AboutSectionProps) {
 
             {/* Section Header */}
             <div className="mb-4">
-              <h2 className="text-xl lg:text-4xl font-bold text-gray-900 leading-tight">
+              <h2 className="text-xl lg:text-3xl font-bold text-gray-900 leading-tight">
                 <span className="text-gray-800">About</span>
                 <div className="inline-block ml-3 relative">
                   <span className="text-[#3E5EC0] font-bold">EuroQuest</span>
@@ -108,7 +108,7 @@ export default function AboutSection({ className = "" }: AboutSectionProps) {
           <div className="grid grid-cols-2 gap-5 max-w-[400px] w-full">
             {/* Courses */}
             <div className="bg-white rounded-2xl p-8 w-full h-full flex items-center justify-center text-center flex-col">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+              <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
                 1000<span className="text-[#3E5EC0]">+</span>
               </div>
               <div className="text-sm text-[#6E6E6E]">Courses</div>
@@ -116,7 +116,7 @@ export default function AboutSection({ className = "" }: AboutSectionProps) {
 
             {/* Cities */}
             <div className="bg-white rounded-2xl p-8 w-full h-full flex items-center justify-center text-center flex-col">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+              <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
                 24<span className="text-[#3E5EC0]">+</span>
               </div>
               <div className="text-sm text-[#6E6E6E]">Cities</div>
@@ -124,7 +124,7 @@ export default function AboutSection({ className = "" }: AboutSectionProps) {
 
             {/* Happy Clients */}
             <div className="bg-white rounded-2xl p-8 w-full h-full flex items-center justify-center text-center flex-col">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+              <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
                 200<span className="text-[#3E5EC0]">+</span>
               </div>
               <div className="text-sm text-[#6E6E6E]">
@@ -136,7 +136,7 @@ export default function AboutSection({ className = "" }: AboutSectionProps) {
 
             {/* On Going Projects */}
             <div className="bg-white rounded-2xl p-8 w-full h-full flex items-center justify-center text-center flex-col">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+              <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
                 100<span className="text-[#3E5EC0]">+</span>
               </div>
               <div className="text-sm text-[#6E6E6E]">
