@@ -42,7 +42,7 @@ export const quickAccessLinks = [
 ];
 
 export const socialLinks = [
-  { href: "#", Icon: FaFacebookF },
+  { href: "https://www.facebook.com/euroquest.international", Icon: FaFacebookF },
   { href: "#", Icon: FaInstagram },
   { href: "#", Icon: FaXTwitter  },
   { href: "#", Icon: FaLinkedinIn },
